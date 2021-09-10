@@ -1,0 +1,673 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;600;700&display=swap')
+@import url('../font/font.css')
+$text-color: #212D55
+$active-color: #31BEF4
+$minor-color: #656D89
+
+.page
+    margin: 0
+    padding: 0
+    font-family:  'Raleway','Gilroy', serif
+    color: $text-color
+.page_mt100
+    margin-top: 100px
+.container
+    width: 1140px
+    margin: 0 auto
+.header
+    height: 800px
+    background: linear-gradient(0deg, rgba(255, 255, 255, 0.75), rgba(255, 255, 255, 0.75)), url('/src/header.webp')
+    background-repeat: no-repeat
+    background-size: cover
+    background-position: left center
+    text-align: center
+.header_bg  
+    background: $text-color
+    overflow: hidden
+.menu 
+    display: flex
+    align-items: center
+    justify-content: space-between
+    padding: 15px 0
+.logo
+    background: url("/src/logo.svg") no-repeat center
+    height: 94px
+    width:  170px
+.logo-inverse
+    background: url("/src/logo-inverse.svg") no-repeat center
+.burger-menu
+        background: url('/src/burger.svg') no-repeat
+        width: 32px
+        height: 32px
+        cursor: pointer
+.burger-menu-active 
+    background: url('/src/exit.svg') no-repeat
+    &::before
+        color: #FFF
+
+.menu__links 
+    margin-left: 72px
+    &>a 
+        text-decoration: none
+        font-weight: 600
+        font-size: 18px
+        margin: 15px
+        line-height: 21px
+        color: $text-color
+        transition: .5s
+        &:hover
+            color: $active-color
+.active-text
+    color: $active-color    
+.contacts
+    display: flex
+    flex-direction: column
+    align-items: center
+.contacts_sm
+    display: flex
+    flex-direction: column
+    align-items: flex-end
+    color: #FFF
+    .callme
+        color: #FFF
+.phone
+    font-family: Gilroy
+    font-weight: 600
+    font-size: 20px
+    line-height: 24px
+.callme
+    font-family: Raleway
+    border: none
+    background: none
+    font-weight: 600
+    font-size: 18px
+    line-height: 21px
+    margin-top: 6px
+    text-decoration: underline
+    color: #212D55
+    cursor: pointer
+    &:hover
+        color: $active-color
+.tabs
+    display: flex
+    align-items: center
+    height: 80px
+    border-top: 1px solid $active-color
+    border-bottom: 1px solid $active-color
+.tab
+    display: flex 
+    align-items: center
+    height: 100%
+    &>a
+        text-decoration: none
+        font-weight: 600
+        font-size: 18px
+        line-height: 21px
+        color: $text-color
+        margin-right: 35px
+    &>a:hover
+        color: $active-color
+.tab_hidden
+    display: none
+.path
+    display: block
+    margin-top: 23px
+    font-family: Gilroy
+    font-style: normal
+    font-weight: 500
+    font-size: 18px
+    line-height: 22px
+.main-menu
+    margin: 20px 0
+    display: block
+    height: 100%
+.main-menu_hidden
+    display: none
+
+.acor-container
+    height: 100%  
+.acor-container .acor-body 
+    display: flex
+    flex-direction: column
+    align-items: flex-end
+    text-align: right
+    margin: 0
+    height: 0
+    box-sizing: border-box
+    transition: color 0.5s, padding 0.5s
+    overflow: hidden
+
+
+.acor-container .acor-body a
+    text-align: right
+
+
+.acor-container label 
+    text-align: right
+    cursor: pointer
+    display: block
+    color: #FFF
+    box-sizing: border-box
+    z-index: 100
+    font-family: Raleway
+    
+    font-size: 18px
+    line-height: 21px
+    transition: color .35s
+
+.acor-container a 
+    color: #FFFFFF
+    text-decoration: none
+    width: 200px
+    font-weight: 400
+
+.acor-container label:hover 
+    color: #FFF
+
+.acor-container input
+    display: none
+
+.acor-container label:before 
+    content: '\2039';
+    width: 10px
+    float: right;
+    transform: rotate(-90deg)
+
+.acor-container input:checked + label 
+    
+    color: #FFF
+
+.acor-container input:checked + label:before 
+    transition: transform .35s
+    transform: rotate(90deg)
+
+.acor-container input:checked + label + .acor-body 
+    height: auto
+    color: #fff
+.acor-body a
+    display: block
+.menu-first
+    margin: 20px 0
+    font-weight: 600
+.menu-second
+    font-weight: 400
+    margin: 10px 0
+.menu-link 
+    margin: 10px 0
+
+.title
+    font-weight: 400
+    font-size: 60px
+    margin: 18px auto
+.title_bold
+    font-weight: 700
+.caption
+    font-size: 32px
+    margin: 26px 0 0 0
+.caption_sm
+    display: none
+.price  
+    font-family: 'Gilroy'
+    font-weight: 700
+    font-size: 35px
+    line-height: 70px
+    margin: 0 0 20px 0
+.btn
+    width: 325px
+    height: 56px
+    background: $active-color
+    box-shadow: 0px 6px 0px #2CABDC
+    box-sizing: border-box
+    border: none
+    border-radius: 10px
+    text-decoration: none
+    color: white
+    font-family: 'Gilroy'
+    font-weight: 600
+    font-size: 22px
+    line-height: 26px
+    cursor: pointer
+    &:hover
+        background: #2CABDC
+.subtitle
+    font-family: Gilroy
+    font-style: normal
+    font-weight: bold
+    font-size: 45px
+    line-height: 70px
+    color: #212D55
+    margin: 20px  0
+    text-align: center
+.subtitle_small
+    font-size: 40px
+    line-height: 48px
+    margin: 0
+.infrastructure
+    position: relative
+#mapid
+    height: 663px
+    position: relative
+    margin-top: 45px
+.inf-swiper
+    position: absolute
+    z-index: 999
+    right: 190px
+    top: 50%
+    transform: translate(0, -50%);
+    margin-top: 15px
+    height: 583px!important
+    width: 370px
+    overflow: hidden
+.layers
+    position: relative
+.inf-navigation-group
+    position: absolute
+    display: flex
+    flex-direction: column
+    justify-content: space-between
+    height: 95px
+    right: 10px
+    top: 0
+    z-index: 999
+.inf-prev
+    transform: rotate(90deg);
+    background: #fff
+.inf-next
+    transform: rotate(-90deg);
+    background: #fff
+.item
+    display: flex
+    justify-content: center
+    align-items: center
+    width: 319px
+    height: 102px!important
+    background-color: #F9FCFD
+    box-shadow: 0px 5px 15px rgba(33, 45, 85, 0.2)
+    border-radius: 10px
+    margin-bottom: 15px
+.item-active 
+    background: $active-color
+.item__icon
+    width: 76px
+    height: 76px
+    filter: drop-shadow(0px 3px 15px rgba(33, 45, 85, 0.15))
+.item__btn
+    position: relative
+    display: flex
+    align-items: center
+    width: 286.34px
+    height: 72px
+    background: #FFFFFF
+    box-shadow: 0px 5px 19px rgba(33, 45, 85, 0.06)
+    border-radius: 10px
+    border: none
+    cursor: pointer
+    overflow: hidden
+    &:hover
+        color: $active-color
+    &_active
+        border: 1px solid $active-color
+.item__title
+    font-family: Gilroy
+    font-style: normal
+    font-weight: 600
+    font-size: 22px
+    line-height: 26px
+    pointer-events: none
+.item__btn::before
+    content: ''
+    position: absolute
+    width: 19.6px
+    height: 18px
+    left: -10px
+    background-color: #F9FCFD
+    box-shadow: inset 0px 5px 19px rgba(33, 45, 85, 0.06)
+    border-radius: 50%
+    z-index: 2
+
+
+.leaflet-popup-content
+    font-family: Gilroy;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 19px;
+    text-align: center!important
+    color: #31BEF4
+    margin: 0!important
+    padding: 0
+.leaflet-popup-content-wrapper    
+    width: 162px;
+    height: 27px;
+    background: #FFFFFF;
+    box-shadow: 0px 3px 15px rgba(33, 45, 85, 0.15);
+    border-radius: 10px;
+    &::before
+        height: 0
+.leaflet-popup-close-button
+    display: none
+
+.swiper 
+
+.description_hint
+    font-family: Gilroy
+    font-style: normal
+    font-weight: 500
+    font-size: 22px
+    line-height: 26px
+    text-align: center
+    margin: 20px
+
+.swiper-content
+    display: flex
+    justify-content: space-between
+    height: 573px
+    width: 100%
+.information
+    position: relative
+.info-item
+    position: absolute
+    max-width: 538px
+    height: 300px
+    bottom: 54px
+    left: 27px
+    background: #FFFFFF
+    box-shadow: 0px 5px 19px rgba(33, 45, 85, 0.06)
+    border-radius: 10px
+    padding: 20px
+    box-sizing: border-box
+.info-item__header
+    display: flex
+    justify-content: space-between
+.info-item__title
+    margin: 0
+    font-family: Gilroy;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 22px;
+    line-height: 27px;
+.navigation-group
+    display: flex
+
+
+.info-item__text
+    font-family: Gilroy
+    font-style: normal
+    font-weight: normal
+    font-size: 16px
+    line-height: 19px
+.btn-navigation
+    width: 25px
+    height: 25px
+    box-shadow: 0px 3px 15px rgba(33, 45, 85, 0.1)
+    border-radius: 50%
+    background: url('/src/arrow.svg')
+    background-repeat: no-repeat
+    background-position: center center
+    cursor: pointer
+.btn-navigation:hover 
+    background: #31BEF4;
+    box-shadow: 0px 3px 15px rgba(49, 190, 244, 0.5)
+.btn-prev
+    
+.btn-next
+    transform: scaleX(-1);
+    margin-left: 30px
+.photos
+    display: flex
+    flex-direction: column
+    justify-content: space-between
+    &img
+        width: 100%
+
+.pagination
+    display: flex
+    margin: 30px 0 60px 0
+    width: 80%
+    justify-content: start
+.desc-pagination
+    display: flex!important
+    margin-right: 40px
+    justify-content: center
+    align-items: center
+    box-sizing: border-box
+    width: 193px
+    height: 102px
+    background: #F9FCFD!important
+    box-shadow: 0px 5px 15px rgba(33, 45, 85, 0.2)
+    border-radius: 10px!important
+    margin-top: 15px
+    opacity: 1!important
+    padding: 15px!important
+
+.desc-pagination_active
+    >button
+        border: 1px solid $active-color
+    >button::after
+        border: 1px solid $active-color
+        z-index: 2
+
+.pagination__btn
+    position: relative
+    display: flex
+    align-items: center
+    width: 286.34px
+    height: 72px
+    background: #FFFFFF
+    box-shadow: 0px 5px 19px rgba(33, 45, 85, 0.06)
+    border-radius: 10px
+    border: none
+    cursor: pointer
+    overflow: hidden
+    z-index: 1
+    
+.pagination__btn::after
+    content: ''
+    position: absolute
+    width: 19.6px
+    height: 18px
+    left: -10px
+    background-color: #F9FCFD
+    box-shadow: inset 0px 5px 19px rgba(33, 45, 85, 0.06)
+    border-radius: 50%
+    z-index: 2
+    
+.pagination__title
+    font-family: Gilroy
+    font-style: normal
+    font-weight: 600
+    font-size: 22px
+    line-height: 26px
+    margin-left: 10px
+.document
+    display: flex
+    align-items: center
+    background: #F9FCFD
+    box-shadow: 0px 5px 15px rgba(33, 45, 85, 0.2)
+    border-radius: 10px
+    width: 263px
+    height: 101px
+    box-sizing: border-box
+    img
+        padding: 28px 11px 28px 20px
+.mySwiper
+    margin: 60px auto 0
+.document__title
+    margin: 0
+    padding: 22px 27px 22px 3px
+
+.doc-pagination
+    display: flex
+    justify-content: space-between
+    margin: 60px auto 20px
+    align-items: center
+    width: 90px!important
+.doc-pagination__element    
+    width: 10px
+    height: 10px
+    padding: 0
+    cursor: pointer
+    background: #FFFFFF
+    border: 1px solid $active-color
+    box-sizing: border-box
+    border-radius: 50%
+.doc-pagination__element-active
+    position: relative
+    width: 20px
+    height: 20px
+    box-sizing: border-box
+    filter: drop-shadow(0px 3px 15px #31BEF4)
+    &>.doc-pagination__active-point
+        position: absolute
+        width: 10px
+        border-radius: 50%
+        height: 10px
+        top: 50%
+        left: 50%
+        transform: translate(-50%, -50%);
+        background: $active-color
+
+
+@media screen and (max-width: 1440px) 
+    .container 
+        max-width: 1140px
+    .menu__links
+        display: none
+    .tabs 
+        display: none
+    .swiper-content
+        display: flex
+        flex-direction: column
+        align-items: center
+        flex-wrap: wrap
+    .pagination
+        flex-wrap: wrap
+    .information
+        &img
+            width: 100%
+
+@media screen and (max-width: 1140px) 
+    .container 
+        max-width: 800px
+
+@media screen and (max-width: 800px) 
+    .container 
+        max-width: 480px
+    .contacts
+        display: none
+    .description>.container
+        width: 100vw
+@media screen and (max-width: 480px) 
+    .container 
+        width: 90%
+    .header 
+        position: relative
+    .menu 
+        padding-bottom: 40px
+    .logo
+        background: url("/src/logo.webp")
+        height: 79px
+        width:  100px
+    .burger-menu 
+        position: relative
+        display: flex
+        align-items: center
+
+        img 
+            pointer-events: none
+    .burger-menu::before
+        position: absolute
+        content: 'Меню'
+        font-family: Gilroy
+        font-weight: 500
+        font-size: 18px
+        line-height: 40px
+        color: #212D55
+        left: -60px
+
+    .title 
+        font-size: 28px
+        line-height: 40px
+        padding-top: 25px
+        margin-bottom: 0
+    .subtitle 
+        font-size: 28px
+        line-height: 34px
+        width: 90%
+        display: block
+        margin: 10px auto 50px
+        text-align: center
+    .price 
+        font-size: 24px;
+        line-height: 29px;
+    .caption
+        font-size: 20px;
+        line-height: 23px;
+        padding: 20px 0 20px
+        text-align: center
+        margin: 0
+    .caption_sm
+        display: block
+    .price
+        margin-bottom: 30px
+    .btn
+        width: 290px
+    .smoke
+        background: url('/src/smoke.webp') no-repeat
+        background-size: cover
+        background-position: top center
+        height: 150px
+        width: 100%
+        position: absolute
+        bottom: 0
+    .inf-swiper
+        right: 10px
+        top: 100px
+        width: 300px
+        height: 220px!important
+        overflow: hidden
+        padding-bottom: 100px
+    .layers
+           
+    .inf-navigation-group
+        top: 100%
+        right: 0
+    .item
+        width: 290px
+    .pagination
+        display: flex
+        flex-direction: column
+        align-items: center
+        margin: 0
+    .desc-pagination
+        text-align: center
+        height: 71px!important
+        margin-right: 0!important
+    .pagination__btn
+        display: flex
+        justify-content: center
+        height: 51px
+
+    .info-item 
+        width: 290px
+        height: 266px
+        left: 0
+        box-sizing: border-box
+        text-overflow: clip
+        font-size: 16px;
+        line-height: 19px;
+    .info-item__text_hidden
+        display: none
+    .swiper-content 
+        display: flex
+        flex-direction: column
+    .doc_slide
+        display: flex
+        justify-content: center
+    .document 
+        width: 290px
+
+
+    .main-menu 
+        height: 100vh
+    $text-color: #eee
